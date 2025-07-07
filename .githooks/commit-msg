@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+MSG_FILE="$1"
+MSG=$(head -n1 "$MSG_FILE")
+
+PATTERN="^(feat|fix|docs|style|refactor|perf|test|build|ci|chore)(\\([a-zA-Z0-9_-]+\\))?: .+"
+
+if ! grep -qE "$PATTERN" <<< "$MSG"; then
+  echo "INVALID COMMIT MESSAGE:"
+  echo "    $MSG"
+  echo
+  echo "Expected format: feat(scope): something useful"
+  echo "Example:         fix(api): handle null response"
+  exit 1
+fi
