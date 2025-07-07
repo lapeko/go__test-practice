@@ -1,0 +1,29 @@
+name: Validate Commits
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  check_commits:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Validate PR commits
+      if: github.event_name == 'pull_request'
+      run: |
+        git log "${{ github.event.pull_request.base.sha }}..${{ github.sha }}" --pretty=format:"%s" | while read line; do
+          echo "$line" | grep -Eq '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore)(\([^)]+\))?: .+' || {
+            echo "Invalid commit message: $line"
+            exit 1
+          }
+        done
+    - name: Validate push commits
+      if: github.event_name == 'push'
+      run: |
+        git log "${{ github.sha }}~10..${{ github.sha }}" --pretty=format:"%s" | while read line; do
+          echo "$line" | grep -Eq '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore)(\([^)]+\))?: .+' || {
+            echo "Invalid commit message: $line"
+            exit 1
+          }
+        done
