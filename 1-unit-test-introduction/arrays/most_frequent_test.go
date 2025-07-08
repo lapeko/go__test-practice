@@ -2,6 +2,7 @@ package arrays
 
 import (
 	"fmt"
+	"math/rand/v2"
 	"testing"
 )
 
@@ -30,6 +31,17 @@ var funcs = map[string]func([]int) int{
 	"MostFrequentNaive": MostFrequentNaive,
 }
 
+const size int = 1e4
+
+var benchPayload = make([]int, size)
+
+func init() {
+	halfSize := size / 2
+	for i := 0; i < size; i++ {
+		benchPayload[i] = rand.IntN(halfSize)
+	}
+}
+
 func TestAllMostFrequentImplementations(t *testing.T) {
 	for fName, fn := range funcs {
 		for _, tt := range tests {
@@ -42,5 +54,17 @@ func TestAllMostFrequentImplementations(t *testing.T) {
 				}
 			})
 		}
+	}
+}
+
+func BenchmarkMostFrequent(b *testing.B) {
+	for b.Loop() {
+		MostFrequent(benchPayload)
+	}
+}
+
+func BenchmarkMostFrequentNaive(b *testing.B) {
+	for b.Loop() {
+		MostFrequentNaive(benchPayload)
 	}
 }
