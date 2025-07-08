@@ -6,32 +6,32 @@ Your tactical map for mastering Go testing. From `t.Errorf` to `go test -fuzz`, 
 
 ## ✅ 1. Basic Unit Testing
 
-* [ ] Understanding `testing.T`
-* [ ] Running tests via `go test`
-* [ ] Creating `*_test.go` files
-* [ ] Simple checks using `if got != want`
-* [ ] Running specific tests with `go test -run`
+* [x] Understanding `testing.T`
+* [x] Running tests via `go test`
+* [x] Creating `*_test.go` files
+* [x] Simple checks using `if got != want`
+* [x] Running specific tests with `go test -run`
 
 ## ✅ 2. Table-Driven Tests
 
-* [ ] Using slices of test cases
-* [ ] Subtests with `t.Run(...)`
-* [ ] Descriptive subtest names
-* [ ] Comparing `NaN`, `float`, and result accuracy
+* [x] Using slices of test cases
+* [x] Subtests with `t.Run(...)`
+* [x] Descriptive subtest names
+* [x] Comparing `NaN`, `float`, and result accuracy
 
 ## ✅ 3. Coverage & Benchmarks
 
-* [ ] Measuring coverage with `go test -cover`
-* [ ] Generating profiles with `go test -coverprofile`
-* [ ] Viewing coverage in browser using `go tool cover -html`
-* [ ] Writing `BenchmarkX(b *testing.B)` functions
-* [ ] Comparing performance of multiple implementations
+* [x] Measuring coverage with `go test -cover`
+* [x] Generating profiles with `go test -coverprofile`
+* [x] Viewing coverage in browser using `go tool cover -html`
+* [x] Writing `BenchmarkX(b *testing.B)` functions
+* [x] Comparing performance of multiple implementations
 
 ## ✅ 4. Errors & Panic
 
-* [ ] Testing errors with `errors.Is`, `errors.As`
-* [ ] Capturing `panic` using `recover`
-* [ ] Validating edge cases and error scenarios
+* [x] Testing errors with `errors.Is`, `errors.As`
+* [x] Capturing `panic` using `recover`
+* [x] Validating edge cases and error scenarios
 
 ## ✅ 5. Interfaces & Mocks
 
@@ -102,4 +102,3 @@ Your tactical map for mastering Go testing. From `t.Errorf` to `go test -fuzz`, 
 * [ ] Keeping tests small and deterministic
 * [ ] Using `require` vs `assert` wisely
 * [ ] Project structure: `/pkg`, `/internal`, `/mocks`
-
