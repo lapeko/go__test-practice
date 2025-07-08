@@ -1,6 +1,7 @@
 package mathz
 
 import (
+	"github.com/lapeko/go__test-practice/utils"
 	"math"
 	"testing"
 )
@@ -51,7 +52,7 @@ func TestNormalize(t *testing.T) {
 			if math.IsNaN(got) && math.IsNaN(tt.want) {
 				return
 			}
-			if got != tt.want {
+			if !utils.IsFloatsSoftEqual(got, tt.want) {
 				t.Errorf("Normalize(%f, %f, %f) = %f; want %f", tt.num, tt.min, tt.max, got, tt.want)
 			}
 		})
