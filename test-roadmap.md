@@ -35,9 +35,9 @@ Your tactical map for mastering Go testing. From `t.Errorf` to `go test -fuzz`, 
 
 ## ✅ 5. Interfaces & Mocks
 
-* [ ] Creating interfaces and decoupling logic
-* [ ] Writing manual mocks
-* [ ] Verifying mock method calls
+* [x] Creating interfaces and decoupling logic
+* [x] Writing manual mocks
+* [X] Verifying mock method calls
 * [ ] Using `gomock` and `mockgen`
 * [ ] Using `testify/mock`
 
