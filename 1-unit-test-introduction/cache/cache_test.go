@@ -2,7 +2,6 @@ package cache
 
 import (
 	"fmt"
-	_ "github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 	"math/rand/v2"
 	"sync"

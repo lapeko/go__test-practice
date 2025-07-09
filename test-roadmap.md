@@ -57,9 +57,9 @@ Your tactical map for mastering Go testing. From `t.Errorf` to `go test -fuzz`, 
 
 ## ✅ 8. Parallel & Param Tests
 
-* [ ] Leveraging `t.Parallel()` for test concurrency
-* [ ] Comparing sequential vs parallel execution
-* [ ] Detecting race conditions
+* [x] Leveraging `t.Parallel()` for test concurrency
+* [x] Comparing sequential vs parallel execution
+* [x] Detecting race conditions
 
 ## ✅ 9. Fuzz Testing
 
@@ -88,17 +88,3 @@ Your tactical map for mastering Go testing. From `t.Errorf` to `go test -fuzz`, 
 * [ ] Using `dockertest` or similar tools
 * [ ] Writing setup and teardown logic
 * [ ] Validating database migrations and transactions
-
-## ✅ 13. CI / GitHub Actions
-
-* [ ] Configuring `.github/workflows/go.yml`
-* [ ] Running full test suite: `go test ./...` + `-race`
-* [ ] Storing coverage as artifacts
-* [ ] Validating PRs with automated tests
-
-## ✅ 14. Best Practices
-
-* [ ] Naming tests clearly: `TestXxx_Case`
-* [ ] Keeping tests small and deterministic
-* [ ] Using `require` vs `assert` wisely
-* [ ] Project structure: `/pkg`, `/internal`, `/mocks`

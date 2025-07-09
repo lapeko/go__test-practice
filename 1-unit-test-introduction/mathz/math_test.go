@@ -3,7 +3,7 @@ package mathz
 import (
 	"errors"
 	"fmt"
-	"github.com/lapeko/go__test-practice/utils"
+	"github.com/lapeko/go__test-practice/1-unit-test-introduction/utils"
 	"math"
 	"testing"
 )

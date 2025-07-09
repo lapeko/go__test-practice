@@ -1,4 +1,4 @@
-module github.com/lapeko/go__test-practice
+module github.com/lapeko/go__test-practice/1-unit-test-introduction
 
 go 1.24.4
 
